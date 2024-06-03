@@ -1,0 +1,13 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+
+scrape_configs:
+  - job_name: 'docker-matrics'
+    static_configs:
+      - targets: ['13.201.115.186:9323']
